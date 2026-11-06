@@ -24,6 +24,14 @@ Příkaz pracuje s aktivní záložkou:
 4. Záložka v SSMS se přejmenuje na název souboru.
 5. Po úspěšném uložení se cesta k souboru zobrazí ve stavovém řádku SSMS dole. Chyby a situace, kdy se nic neuloží, se zobrazí v okně se zprávou.
 
+Neuložený dotaz se záložkou `SQLQuery1.sql`:
+
+![Neuložený dotaz](docs/images/neulozeny-dotaz.png)
+
+Po doplnění `-- Testovaci` na první řádek a spuštění příkazu se dotaz uloží jako `Testovaci.sql` a záložka se přejmenuje:
+
+![Uložený a přejmenovaný dotaz](docs/images/ulozeny-dotaz.png)
+
 ### Příklady pojmenování
 
 | První řádek dotazu          | Výsledný soubor                     |
@@ -56,6 +64,10 @@ Pravým tlačítkem na záložku → **Barva záložky** → **Červená / Zelen
   - **Bez barvy** řádek s barvou smaže.
 - Když 1. řádek název nemá, text se nemění, jen se obarví záložka.
 - Dokument se tím změní, ale **neuloží**. Změnu jde vrátit přes Ctrl+Z. Po uložení zůstane barva v textu a po restartu SSMS ji vrátí příkaz **Uložit dotaz**.
+
+Záložka po volbě **Červená** (vložený 2. řádek `-- červená`, dokument je neuložený):
+
+![Obarvená záložka](docs/images/obarvena-zalozka.png)
 
 ### Automaticky při otevření souboru
 
@@ -214,6 +226,7 @@ V kořeni jsou skripty a README, zdrojové kódy a projekt jsou ve `src\`.
 | `install.bat` / `install.ps1` | instalace do SSMS                                       |
 | `uninstall.bat`               | odinstalace ze SSMS                                     |
 | `README.md`                   | tento popis                                             |
+| `docs\images\`                | obrázky do README                                       |
 | `src\SSMSTabManager.csproj`   | projekt (.NET Framework 4.7.2, VS SDK 15.0)              |
 | `src\source.extension.vsixmanifest` | manifest rozšíření                                |
 | `src\SSMSTabManager.json`     | nastavení (cílová složka)                                |
